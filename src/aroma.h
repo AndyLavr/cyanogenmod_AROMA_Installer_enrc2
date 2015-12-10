@@ -78,14 +78,14 @@
 /*
   //-- MOVE TO Android.mk
   #define AROMA_NAME        "AROMA INSTALLER"
-  #define AROMA_VERSION     "2.70B6"
-  #define AROMA_BUILD       "130624-042B"
-  #define AROMA_BUILD_CN    "Flamboyan-Beta"
+  #define AROMA_VERSION     "2.71"
+  #define AROMA_BUILD       "151208-002R"
+  #define AROMA_BUILD_CN    "AndyLavr-Release"
 */
-#define AROMA_BUILD_L     "Bandung - Indonesia"
-#define AROMA_BUILD_A     "<support@amarullz.com>"
-#define AROMA_BUILD_URL   "http://www.amarullz.com/"
-#define AROMA_COPY        "(c) 2013 by amarullz xda-developers"
+#define AROMA_BUILD_L     "Kiev - Ukraine"
+#define AROMA_BUILD_A     "<andy.lavr@gmail.com>"
+#define AROMA_BUILD_URL   "https://github.com/AndyLavr/cyanogenmod_AROMA_Installer_enrc2"
+#define AROMA_COPY        "(c) 2015 by Andy.Lavr 4pda.ru"
 
 //-- Temporary Dir - Move from /tmp/aroma-data to /tmp/aroma symlink to /tmp/aroma-data for backward compatibility
 #define AROMA_SYSTMP      "/tmp"
@@ -370,6 +370,7 @@ typedef struct  {
   char  text_ok[64];          // OK
   char  text_next[64];        // Next >
   char  text_back[64];        // < Back
+  char  text_savelog[64];     // Save Logs
   
   char  text_yes[64];         // Yes
   char  text_no[64];          // No
