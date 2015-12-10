@@ -630,7 +630,7 @@ int aroma_start_install(
           int nHeight = ph + agdp() * 4;
           int nWidth  = floor((agw() - (nPad * 2) - nHeight) / 2);
           int nY      = py - agdp() * 2;
-          imgbtn(hWin, nPad, nY, nWidth, nHeight, NULL, "Save Logs", 4, 8);
+          // imgbtn(hWin, nPad, nY, nWidth, nHeight, NULL, acfg()->text_savelog, 4, 8);
           ACONTROLP nxtbtn = imgbtn(hWin, nPad + nWidth + nHeight, nY, nWidth, nHeight, aui_next_icon(), acfg()->text_next, 5, 6);
           // ACONTROLP menubtn = imgbtn(hWin, nPad + nWidth, nY, nHeight, nHeight, aui_menu_icon(), NULL, 4, 200);
           aw_show_ex(hWin, 4, 0, nxtbtn);
