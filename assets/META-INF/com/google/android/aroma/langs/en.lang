@@ -32,6 +32,7 @@ text_about=About
 text_calibrating=Calibrating Tools
 text_quit=Quit Installation
 text_quit_msg=Are you sure to quit the installer?
+test_savelog=Save Log
 
 #
 #-- CUSTOM STRING RESOURCE

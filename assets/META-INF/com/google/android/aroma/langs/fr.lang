@@ -32,6 +32,7 @@ text_about=À propos
 text_calibrating=Outils de calibration
 text_quit=Quitter l'installation
 text_quit_msg=Êtes-vous sûre de vouloir quitter l'installation?
+text_savelog=Enregistrer le journal
 
 #
 #-- CUSTOM STRING RESOURCE

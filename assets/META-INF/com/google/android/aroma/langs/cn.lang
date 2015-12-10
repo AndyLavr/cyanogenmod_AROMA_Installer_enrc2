@@ -32,6 +32,7 @@ text_about=关于
 text_calibrating=屏幕校准
 text_quit=退出安装
 text_quit_msg=你确定要退出安装吗？
+text_savelog=保存日誌
 
 #
 #-- CUSTOM STRING RESOURCE

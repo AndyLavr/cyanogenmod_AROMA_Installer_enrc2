@@ -32,6 +32,7 @@ text_about=Tentang
 text_calibrating=Alat Kalibrasi
 text_quit=Keluar dari Instaler
 text_quit_msg=Anda yakin akan keluar dari instaler?
+text_savelog=Simpan Log
 
 #
 #-- CUSTOM STRING RESOURCE

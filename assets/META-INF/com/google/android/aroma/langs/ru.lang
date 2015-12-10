@@ -16,7 +16,7 @@
 #
 ### LANGUAGE STRING RESOURCE FILE
 #
-#   Language  : English
+#   Language  : Russian
 #   By        : amarullz
 #
 
@@ -32,6 +32,7 @@ text_about=About
 text_calibrating=Калибровка
 text_quit=Покинуть установку
 text_quit_msg=Вы действительно хотите покинуть установку?
+text_savelog=Сохранить Лог
 
 #
 #-- CUSTOM STRING RESOURCE

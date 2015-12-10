@@ -32,6 +32,7 @@ text_about=AROMAについて
 text_calibrating=調整ツール
 text_quit=インストールの中断
 text_quit_msg=インストールを中断しますか?
+text_savelog=ログの保存
 
 #
 #-- CUSTOM STRING RESOURCE

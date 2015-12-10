@@ -32,6 +32,7 @@ text_about=Über
 text_calibrating=Kalibrierung
 text_quit=Installation beenden
 text_quit_msg=Installer wirklich beenden?
+text_savelog=Save Log
 
 #
 #-- CUSTOM STRING RESOURCE

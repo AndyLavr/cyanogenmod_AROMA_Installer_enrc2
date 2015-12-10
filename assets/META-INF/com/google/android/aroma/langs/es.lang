@@ -32,6 +32,7 @@ text_about=Acerca de
 text_calibrating=Calibrar pantalla
 text_quit=Salir de la instalación
 text_quit_msg=¿Seguro que quieres salir?
+text_savelog=Guardar registro
 
 #
 #-- CUSTOM STRING RESOURCE
