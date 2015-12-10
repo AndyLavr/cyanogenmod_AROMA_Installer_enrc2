@@ -1335,6 +1335,9 @@ Value * AROMA_INI_GET(const char * name, State * state, int argc, Expr * argv[])
   else if (strcmp(args[0], "text_next") == 0) {
     snprintf(retval, 128, "%s", acfg()->text_next);
   }
+  else if (strcmp(args[0], "text_savelog") == 0) {
+    snprintf(retval, 128, "%s", acfg()->text_savelog);
+  }
   else if (strcmp(args[0], "text_back") == 0) {
     snprintf(retval, 128, "%s", acfg()->text_back);
   }
@@ -1455,6 +1458,9 @@ Value * AROMA_INI_SET(const char * name, State * state, int argc, Expr * argv[])
   }
   else if (strcmp(args[0], "text_next") == 0) {
     snprintf(acfg()->text_next, 64, "%s", args[1]);
+  }
+  else if (strcmp(args[0], "text_savelog") == 0) {
+    snprintf(acfg()->text_savelog, 64, "%s", args[1]);
   }
   else if (strcmp(args[0], "text_back") == 0) {
     snprintf(acfg()->text_back, 64, "%s", args[1]);
@@ -1818,7 +1824,7 @@ Value * AROMA_VIEWBOX(const char * name, State * state, int argc, Expr * argv[])
   }
   
   ACONTROLP nxtbtn = imgbtn(hWin, nPad + nWidth + nHeight, nY, nWidth, nHeight, aui_next_icon(), acfg()->text_next, 5, 6);
-  ACONTROLP menubtn = imgbtn(hWin, nPad + nWidth, nY, nHeight, nHeight, aui_menu_icon(), NULL, 4, 200);
+  // ACONTROLP menubtn = imgbtn(hWin, nPad + nWidth, nY, nHeight, nHeight, aui_menu_icon(), NULL, 4, 200);
   char save_var_name[256];
   
   if (argc == 6) {
@@ -1829,7 +1835,7 @@ Value * AROMA_VIEWBOX(const char * name, State * state, int argc, Expr * argv[])
   //-- Release Arguments
   _FREEARGS();
   //-- Dispatch Message
-  aw_show_ex(hWin, is_back_request, 0, menubtn);
+  aw_show_ex(hWin, is_back_request, 0, nxtbtn);
   /*
   aw_show(hWin);
   aw_setfocus(hWin, menubtn);
@@ -2027,11 +2033,11 @@ Value * AROMA_TEXTBOX(const char * name, State * state, int argc, Expr * argv[])
   }
   
   ACONTROLP nxtbtn = imgbtn(hWin, nPad + nWidth + nHeight, nY, nWidth, nHeight, aui_next_icon(), acfg()->text_next, 5, 6);
-  ACONTROLP menubtn = imgbtn(hWin, nPad + nWidth, nY, nHeight, nHeight, aui_menu_icon(), NULL, 4, 200);
+  // ACONTROLP menubtn = imgbtn(hWin, nPad + nWidth, nY, nHeight, nHeight, aui_menu_icon(), NULL, 4, 200);
   //-- Release Arguments
   _FREEARGS();
   //-- Dispatch Message
-  aw_show_ex(hWin, is_back_request, 0, menubtn);
+  aw_show_ex(hWin, is_back_request, 0, nxtbtn);
   /*
     aw_show(hWin);
     aw_setfocus(hWin, menubtn);
@@ -2175,7 +2181,7 @@ Value * AROMA_CHECKOPT(const char * name, State * state, int argc, Expr * argv[]
   }
   
   ACONTROLP nxtbtn = imgbtn(hWin, nPad + nWidth + nHeight, nY, nWidth, nHeight, aui_next_icon(), acfg()->text_next, 5, 6);
-  ACONTROLP menubtn = imgbtn(hWin, nPad + nWidth, nY, nHeight, nHeight, aui_menu_icon(), NULL, 4, 200);
+  // ACONTROLP menubtn = imgbtn(hWin, nPad + nWidth, nY, nHeight, nHeight, aui_menu_icon(), NULL, 4, 200);
   //-- Populate Checkbox Items
   char propkey[64];
   char groupiid[64][32];
@@ -2239,7 +2245,7 @@ Value * AROMA_CHECKOPT(const char * name, State * state, int argc, Expr * argv[]
   //-- Release Arguments
   _FREEARGS();
   //-- Dispatch Message
-  aw_show_ex(hWin, is_back_request, 0, menubtn);
+  aw_show_ex(hWin, is_back_request, 0, nxtbtn);
   /*
     aw_show(hWin);
     aw_setfocus(hWin, menubtn);
@@ -2419,7 +2425,7 @@ Value * AROMA_CHECKBOX(const char * name, State * state, int argc, Expr * argv[]
   }
   
   ACONTROLP nxtbtn = imgbtn(hWin, nPad + nWidth + nHeight, nY, nWidth, nHeight, aui_next_icon(), acfg()->text_next, 5, 6);
-  ACONTROLP menubtn = imgbtn(hWin, nPad + nWidth, nY, nHeight, nHeight, aui_menu_icon(), NULL, 4, 200);
+  // ACONTROLP menubtn = imgbtn(hWin, nPad + nWidth, nY, nHeight, nHeight, aui_menu_icon(), NULL, 4, 200);
   //-- Populate Checkbox Items
   char propkey[64];
   int idx = 0;
@@ -2451,7 +2457,7 @@ Value * AROMA_CHECKBOX(const char * name, State * state, int argc, Expr * argv[]
   //-- Release Arguments
   _FREEARGS();
   //-- Dispatch Message
-  aw_show_ex(hWin, is_back_request, 0, menubtn);
+  aw_show_ex(hWin, is_back_request, 0, nxtbtn);
   /*
     aw_show(hWin);
     aw_setfocus(hWin, menubtn);
@@ -2618,7 +2624,7 @@ Value * AROMA_SELECTBOX(const char * name, State * state, int argc, Expr * argv[
   }
   
   ACONTROLP nxtbtn = imgbtn(hWin, nPad + nWidth + nHeight, nY, nWidth, nHeight, aui_next_icon(), acfg()->text_next, 5, 6);
-  ACONTROLP menubtn = imgbtn(hWin, nPad + nWidth, nY, nHeight, nHeight, aui_menu_icon(), NULL, 4, 200);
+  // ACONTROLP menubtn = imgbtn(hWin, nPad + nWidth, nY, nHeight, nHeight, aui_menu_icon(), NULL, 4, 200);
   char propkey[64];
   //-- Populate Checkbox Items
   int group_id = 0;
@@ -2651,7 +2657,7 @@ Value * AROMA_SELECTBOX(const char * name, State * state, int argc, Expr * argv[
   //-- Release Arguments
   _FREEARGS();
   //-- Dispatch Message
-  aw_show_ex(hWin, is_back_request, 0, menubtn);
+  aw_show_ex(hWin, is_back_request, 0, nxtbtn);
   /*
     aw_show(hWin);
     aw_setfocus(hWin, menubtn);
@@ -2803,7 +2809,7 @@ Value * AROMA_MENUBOX(const char * name, State * state, int argc, Expr * argv[])
     backbtn = imgbtn(hWin, nPad, nY, nWidth, nHeight, aui_back_icon(), acfg()->text_back, 4, 5);
   }
   
-  ACONTROLP menubtn = imgbtn(hWin, nPad + nWidth, nY, nHeight, nHeight, aui_menu_icon(), NULL, 4, 200);
+  // ACONTROLP menubtn = imgbtn(hWin, nPad + nWidth, nY, nHeight, nHeight, aui_menu_icon(), NULL, 4, 200);
   char propkey[64];
   
   //-- Populate Checkbox Items
@@ -3480,6 +3486,7 @@ Value * AROMA_LOADLANG(const char * name, State * state, int argc, Expr * argv[]
     aui_langloadsave(acfg()->text_about, 64, "text_about");
     aui_langloadsave(acfg()->text_calibrating, 64, "text_calibrating");
     aui_langloadsave(acfg()->text_quit, 64, "text_quit");
+    aui_langloadsave(acfg()->text_savelog, 64, "text_savelog");
     aui_langloadsave(acfg()->text_quit_msg, 128, "text_quit_msg");
   }
   
