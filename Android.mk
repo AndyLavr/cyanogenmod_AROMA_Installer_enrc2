@@ -18,9 +18,9 @@ include $(CLEAR_VARS)
   ## VERSIONING
   ##
   AROMA_NAME    := AROMA Installer
-  AROMA_VERSION := 2.70RC2
+  AROMA_VERSION := 2.71
   AROMA_BUILD   := $(shell date +%y%m%d%H)
-  AROMA_CN      := Flamboyan
+  AROMA_CN      := AndyLavr-Release
 
   ## LOCAL PATH COPY
   AROMA_INSTALLER_LOCALPATH := $(LOCAL_PATH)
